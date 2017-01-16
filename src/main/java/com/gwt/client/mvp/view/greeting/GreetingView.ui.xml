@@ -5,7 +5,7 @@
 
 	<gwt:HTMLPanel>
 		<div class="in-system">
-			<gwt:Label ui:field="userGreeting" text="i18n.greeting" styleName="greeting"/>
+			<gwt:Label ui:field="userGreeting" text="" styleName="greeting"/>
 			<gwt:Anchor ui:field="logOut" text="{i18n.logout}" styleName="log-out"/>
 		</div>
 	</gwt:HTMLPanel>

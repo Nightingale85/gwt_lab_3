@@ -18,13 +18,8 @@ public class ClientFactoryImpl implements ClientFactory {
 	private final PlaceController placeController = new PlaceController(eventBus);
 	private final Messenger messenger = Messenger.getInstance();
 	private final ILoginView loginView = new LoginView();
-	private final IGreetingView greetingView;
+	private final IGreetingView greetingView = new GreetingView();
 
-	public ClientFactoryImpl() {
-		GreetingView greeting = new GreetingView();
-		greeting.getUserGreeting().setText(messenger.getMessage(DayPartUtil.getDayPart(new Date())));
-		greetingView = greeting;
-	}
 
 	@Override public EventBus getEventBus() { return eventBus; }
 	@Override public PlaceController getPlaceController() { return placeController; }
